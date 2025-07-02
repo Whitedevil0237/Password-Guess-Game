@@ -1,0 +1,34 @@
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Guess Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="score-global" id="score">Score: 0</div>
+
+    <div class="game-container">
+        <h1>Password Guess Game</h1>
+        <div class="hints">
+            <p>Hints:</p>
+            <ul>
+                <li id="hint-name">Name: [Random Name]</li>
+                <li id="hint-dob">Date of Birth: [Random DOB]</li>
+                <li id="hint-address">Address: [Random Address]</li>
+                <li id="hint-pet">Pet Name: [Random Pet]</li>
+            </ul>
+        </div>
+
+        <div class="guess-area">
+            <label>Guess the Password:</label>
+            <div id="guess-boxes" class="guess-boxes"></div>
+            <button id="submit-guess">Submit Guess</button>
+        </div>
+
+        <div class="feedback" id="feedback"></div>
+        <div class="attempts" id="attempts"></div>
+        <button id="next-password" style="display:none;">Next Password</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
