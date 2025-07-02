@@ -434,8 +434,7 @@ document.getElementById("submit-guess").addEventListener("click", () => {
     feedback.textContent = `✅ Correct! Password cracked! +${roundPoints} points`;
     nextPasswordBtn.style.display = "block";
 } else {
-    score = Math.max(0, score - 1); // prevents negative score
-    feedback.textContent = "❌ Some characters are incorrect. Keep trying! (1 point)";
+    feedback.textContent = "❌ Some characters are incorrect. Keep trying!";
 }
 
     scoreDisplay.textContent = `Score: ${score}`;
