@@ -425,18 +425,18 @@ document.getElementById("submit-guess").addEventListener("click", () => {
         }
     });
 
-    if (correct === actualPassword.length) {
-        roundPoints += 10;
-        if (attempts === 1) {
-            roundPoints += 5;
-        }
-        score += roundPoints;
-        feedback.textContent = `✅ Correct! Password cracked! +${roundPoints} points`;
-        nextPasswordBtn.style.display = "block";
-    } else {
-        score -= 1;
-        feedback.textContent = "❌ Some characters are incorrect. Keep trying! (-1 point)";
+   if (correct === actualPassword.length) {
+    roundPoints += 10;
+    if (attempts === 1) {
+        roundPoints += 5;
     }
+    score += roundPoints;
+    feedback.textContent = `✅ Correct! Password cracked! +${roundPoints} points`;
+    nextPasswordBtn.style.display = "block";
+} else {
+    score = Math.max(0, score - 1); // prevents negative score
+    feedback.textContent = "❌ Some characters are incorrect. Keep trying! (1 point)";
+}
 
     scoreDisplay.textContent = `Score: ${score}`;
 });
